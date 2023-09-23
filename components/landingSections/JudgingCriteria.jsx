@@ -84,7 +84,7 @@ const JudgingCriteria = () => {
             requirements.
           </p>
         </div>
-        <div className="border-[1px] border-transparent w-full md:mt-12 mt-6 relative z-10 gradient-border">
+        <div className="border-[1px] border-transparent w-[176px] md:mt-12 mt-6 relative z-10 gradient-border">
           <button className=" custom-button  text-white w-[174px]  text-[12px] md:text-[16px] rounded-[4px] font-mont">
             Read more
           </button>
