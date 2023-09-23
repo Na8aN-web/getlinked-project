@@ -2,26 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public//fonts//Montserrat/Fonts/OTF/Montserrat-Regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+  font-family: "Clash";
+  src: url("../public//fonts/Clash\ Display/Fonts/OTF/ClashDisplay-Bold.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unica";
+  src: url("../public/fonts/Unica_One/UnicaOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.opacity-68 {
+  opacity: 0.48;
+}
+
+.gradient-pink {
+  background: rgba(199, 21, 133, 0.68);
+  background: radial-gradient(
+    circle,
+    rgba(144, 58, 255, 0.3) 0%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+
+.navbar-text:hover {
+  background-image: linear-gradient(to right, #903aff, #e136cc, #fe34b9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.custom-button {
+  background: linear-gradient(to right, #fe34b9, #e136cc, #903aff);
+  height: 53px;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease, border 0.3s ease; /* Added border transition */
+  border: 2px solid linear-gradient(to right, #fe34b9, #e136cc, #903aff);
+}
+.custom-button:hover {
+  background: #150e28;
+}
+
+.gradient-border:hover {
+  border-radius: 30px;
+  border-image: linear-gradient(to bottom, #903aff, #e136cc, #fe34b9) 1;
+  border-image-slice: 1;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  display: none; /* Hide the default checkbox */
+}
+
+.checkbox-icon {
+  min-width: 16px;
+  min-height: 16px;
+  background-color: #150e28;
+  border: 2px solid white;
+  border-radius: 3px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-checkbox input:checked + .checkbox-icon {
+  background-color: #fe34b9; /* Change the background color when checked */
+}
+
+/* Style the custom select */
+.custom-select {
+  appearance: none;
+  background: url("../public//images//icons/arrow.png") no-repeat right 20px
+    center; /* Set the path to your custom arrow image */
+  padding-right: 20px; /* Adjust the padding as needed */
+  border: 1px solid white;
+  color: white;
+  width: 263px;
+  height: 53px;
+}
+.custom-select1 {
+  appearance: none;
+  background: url("../public//images//icons/arrow.png") no-repeat right 20px
+    center; 
+  border: 1px solid white;
+  color: white;
+  width: 263px;
+  height: 53px;
+}
+@media (max-width: 600px) {
+  .custom-select {
+    background: url("../public//images//icons/arrow.png") no-repeat right 10px
+      center;
+    width: 203px;
+  }
+  .custom-select1 {
+    background: url("../public//images//icons/arrow.png") no-repeat right 10px
+      center;
+    width: 203px;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media (max-width: 500px) {
+  .custom-select {
+    background: url("../public//images//icons/arrow.png") no-repeat right 10px
+      center;
+    width: 150px;
+  }
+  .custom-select1 {
+    background: url("../public//images//icons/arrow.png") no-repeat right 10px
+      center;
+    width: 125px;
+  }
 }
